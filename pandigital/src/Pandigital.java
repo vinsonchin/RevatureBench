@@ -1,5 +1,3 @@
-package pandigital;
-
 public class Pandigital {
 
     public static void main(String[] args) {

@@ -1,8 +1,7 @@
-package josephus;
-
 import java.util.*;
 
 public class Josephus {
+
     public static void main(String[] args) {
         System.out.println("josephus(41, 3) -> " + josephus(41, 3));
         System.out.println("josephus(35, 11) -> " + josephus(35, 11));
