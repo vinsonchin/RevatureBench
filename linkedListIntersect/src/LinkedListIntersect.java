@@ -54,11 +54,10 @@ public class LinkedListIntersect {
 
             if(head == null) {
                 head = newNode;
-                tail = newNode;
             } else {
                 tail.next = newNode;
-                tail = newNode;
             }
+            tail = newNode;
         }
     }
 }
