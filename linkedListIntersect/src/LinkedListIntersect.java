@@ -19,7 +19,7 @@ public class LinkedListIntersect {
 
     }
 
-    public static int intersect(SingleLinked first, SingleLinked second) {
+    public static Object intersect(SingleLinked first, SingleLinked second) {
 
         Node currentFirst = first.head;
         Node currentSecond = second.head;
@@ -32,12 +32,12 @@ public class LinkedListIntersect {
         return currentFirst.data;
     }
 
-    public static class Node {
+    public static class Node<T> {
 
-        private int data;
+        private T data;
         private Node next;
 
-        public Node(int data) {
+        public Node(T data) {
             this.data = data;
             next = null;
         }
