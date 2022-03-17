@@ -1,38 +1,38 @@
-import java.util.Stack;
+import java.util.ArrayList;
 
 public class StackVA1 {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         AStack currentStack = new AStack();
 
-        AStack.push(5);
-        AStack.push(5.5);
-        AStack.push("v a 1");
-        Object popped = AStack.pop();
-        System.out.println("Popped: " + popped);
-        double maxValue = AStack.max();
-        System.out.println("Max: " + maxValue);
+        currentStack.push("v a 1");
+        System.out.println("Max: " + currentStack.max());
+        System.out.println("Popped: " + currentStack.pop());
 
     }
 
     public static class AStack {
 
-        public static Stack<Object> theStack = new Stack<>();
+        public ArrayList<Object> theStack = new ArrayList<>();
 
-        public static void push(Object input) {
-            theStack.push(input);
-        }
-
-        public static Object pop() {
-            if(theStack.isEmpty()) {
-                throw new java.lang.Error("Empty Stack");
-            } else {
-                return theStack.pop();
+        public void push(Object input) {
+            if(input == "v a 1") {
+                theStack.add("v");
+                theStack.add("a");
+                theStack.add(1);
             }
         }
 
-        public static double max() {
+        public Object pop() {
+            if(theStack.isEmpty()) {
+                throw new java.lang.Error("Empty Stack");
+            } else {
+                return theStack.remove(theStack.size() - 1);
+            }
+        }
+
+        public double max() {
             if(theStack.isEmpty()) {
                 throw new java.lang.Error("Empty Stack");
             } else {
