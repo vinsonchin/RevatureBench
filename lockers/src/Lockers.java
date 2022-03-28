@@ -14,8 +14,9 @@ public class Lockers {
         If a locker number has an even number of factors, the locker will be closed at the end.
         Every factor has a corresponding factor which creates a pair (e.g. factors of 6 are (1,6) and (2,3)).
         This means all numbers except for perfect squares will have an even number of factors (locker will be closed).
-        We just need to count the number of perfect squares which happens to equal the square root of the number of
-        lockers without the decimal.
+        Perfect squares have an odd number of factors because the two factors in one of the pairs are the same number.
+        This number is only counted once since the man will not repeat the same number. We just need to count the
+        number of perfect squares which happens to equal the square root of the number of lockers without the decimal.
      */
     public static int openLockers(int numOfLockers) {
         return (int) Math.sqrt(numOfLockers);
